@@ -1,0 +1,22 @@
+# Core Epoch INT8 models
+
+The INT8 ONNX computer-vision models published by [Core Epoch](https://coreepoch.dev).
+Each Hugging Face page carries the model file, its measured accuracy table, and
+run instructions.
+
+| Model | Task | Accuracy | Size |
+|---|---|---|---|
+| [EdgeNeXt-S](https://huggingface.co/CoreEpoch/edgenext-small-int8-imagenet) | ImageNet-1K | 81.53% top-1 | 7.2 MB |
+| [XCiT-Tiny-12/P8](https://huggingface.co/CoreEpoch/xcit-tiny12-p8-int8-imagenet) | ImageNet-1K | 81.16% top-1 | 8.6 MB |
+| [TinyViT-5M](https://huggingface.co/CoreEpoch/tinyvit-5m-int8-imagenet) | ImageNet-1K | 80.53% top-1 | 9.2 MB |
+| [RT-DETRv2-S](https://huggingface.co/CoreEpoch/rtdetrv2-s-int8-onnx) | COCO val2017 | 45.7 AP | 32.7 MB |
+
+All four run on both ONNX Runtime and OpenVINO from the same file, with no GPU
+required. Quantized with Kenosis, Core Epoch's post-training quantizer (patent
+pending).
+
+## License
+
+This index is [Apache-2.0](LICENSE).
+
+[coreepoch.dev](https://coreepoch.dev) · core@coreepoch.dev
