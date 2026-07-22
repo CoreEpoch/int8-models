@@ -14,6 +14,10 @@ trusted.
 | OpenVINO | 2026.2.0, CPU plugin |
 | ONNX opset | 18, no custom operators |
 
+Every figure on the cards was measured on this machine. Absolute latency will
+differ on other hardware; the ratios are the transferable part, and those depend
+on the runtime's kernel coverage for the target CPU.
+
 ## Evaluation sets
 
 **ImageNet-1K (classifiers).** 49,872 images: the full 50,000-image validation
@@ -92,6 +96,16 @@ Every classifier interval includes zero. These are spot checks against the
 full-set headline numbers, not a second headline protocol, and they are
 reported as such.
 
+## ARM64 portability check
+
+The artifacts load and run under the aarch64 ONNX Runtime wheel, reproducing the
+x86 predictions at 96.9% agreement on a 128-image sample; the disagreements are
+rank-1 versus rank-2 swaps on borderline images. This check was run in a QEMU
+aarch64 environment, which establishes that the files load and predict correctly
+on the architecture. Emulation selects generic kernels rather than the
+dot-product path ARM silicon uses, so the latency figures published here are the
+x86 ones.
+
 ## Baseline comparison
 
 The comparison row on each card is ONNX Runtime's own static quantizer given
@@ -104,16 +118,3 @@ failure and fall back the same way. onnxruntime also offers Percentile
 and Entropy calibration and per-node exclusion lists; the comparison uses each
 tool's standard invocation rather than a per-model tuned one. The exact
 invocation for each model is in [baselines/](baselines/).
-
-## What is not claimed
-
-- ARM64 is verified under emulation rather than on hardware. The artifacts
-  load and run under QEMU aarch64 with the aarch64 ONNX Runtime wheel,
-  reproducing x86 predictions at 96.9% on a 128-image sample, with the
-  disagreements being rank-1 versus rank-2 swaps on borderline images. No
-  physical Raspberry Pi measurement is published.
-- OpenVINO accuracy is a spot check. The headline accuracy numbers are ONNX
-  Runtime measurements on the full evaluation sets.
-- The numbers come from one machine. Absolute latency will differ on other
-  hardware; the ratios are the transferable part, and even those depend on the
-  runtime's kernel coverage for the target CPU.
