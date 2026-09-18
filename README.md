@@ -13,10 +13,12 @@ run instructions.
 
 All four run on both ONNX Runtime and OpenVINO from the same file, with no GPU
 required. Quantized with Kenosis, Core Epoch's proprietary post-training quantizer.
-For licensing inquiries or custom model quantization: [coreepoch.dev/kenosis](https://coreepoch.dev/kenosis/) · core@coreepoch.dev
+For licensing inquiries or custom model quantization: [coreepoch.dev/kenosis](https://coreepoch.dev/kenosis/) · licensing@coreepoch.dev
 
 ## License
 
 This index is [Apache-2.0](LICENSE).
 
-[coreepoch.dev](https://coreepoch.dev) · core@coreepoch.dev
+Notice: The open-source license applies strictly to the published model weights and ONNX inference graph. Core Epoch LLC explicitly reserves all proprietary rights, including patent, copyright, and trade secret rights, in the Kenosis quantization software, graph compilation toolchain, and underlying algorithmic optimization processes. No compiler license is granted or implied.
+
+[coreepoch.dev](https://coreepoch.dev) · licensing@coreepoch.dev
