@@ -12,8 +12,8 @@ run instructions.
 | [RT-DETRv2-S](https://huggingface.co/CoreEpoch/rtdetrv2-s-int8-onnx) | COCO val2017 | 45.7 AP | 32.7 MB |
 
 All four run on both ONNX Runtime and OpenVINO from the same file, with no GPU
-required. Quantized with Kenosis, Core Epoch's post-training quantizer (patent
-pending).
+required. Quantized with Kenosis, Core Epoch's proprietary post-training quantizer.
+For licensing inquiries or custom model quantization: [coreepoch.dev/kenosis](https://coreepoch.dev/kenosis/) · core@coreepoch.dev
 
 ## License
 
