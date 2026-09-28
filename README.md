@@ -10,8 +10,9 @@ run instructions.
 | [XCiT-Tiny-12/P8](https://huggingface.co/CoreEpoch/xcit-tiny12-p8-int8-imagenet) | ImageNet-1K | 81.16% top-1 | 8.6 MB |
 | [TinyViT-5M](https://huggingface.co/CoreEpoch/tinyvit-5m-int8-imagenet) | ImageNet-1K | 80.53% top-1 | 9.2 MB |
 | [RT-DETRv2-S](https://huggingface.co/CoreEpoch/rtdetrv2-s-int8-onnx) | COCO val2017 | 45.7 AP | 32.7 MB |
+| [RF-DETR Base](https://huggingface.co/CoreEpoch/rfdetr-base-int8-onnx) | COCO val2017 | 53.1 AP | 41.9 MB |
 
-All four run on both ONNX Runtime and OpenVINO from the same file, with no GPU
+All five run on both ONNX Runtime and OpenVINO from the same file, with no GPU
 required. Quantized with Kenosis, Core Epoch's proprietary post-training quantizer.
 For licensing inquiries or custom model quantization: [coreepoch.dev/kenosis](https://coreepoch.dev/kenosis/#licensing) · licensing@coreepoch.dev
 
