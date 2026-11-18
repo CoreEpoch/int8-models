@@ -10,7 +10,7 @@ Open-weight INT8 ONNX models quantized with [Kenosis](https://coreepoch.dev/keno
 | [XCiT-Tiny-12/P8](https://huggingface.co/CoreEpoch/xcit-tiny12-p8-int8-imagenet) | ImageNet-1K | 81.16% vs 81.22% top-1 | 8.37 MB | 36% faster |
 | [TinyViT-5M](https://huggingface.co/CoreEpoch/tinyvit-5m-int8-imagenet) | ImageNet-1K | 80.53% vs 80.87% top-1 | 8.99 MB | about the same |
 
-All models are standard `.onnx` files that run directly in ONNX Runtime and OpenVINO on CPU (speeds measured on a CPU with AVX-VNNI, 1 thread). Downloads on Hugging Face use an automatic access gate (instant access after submitting the short form).
+All models are standard `.onnx` files that run directly in ONNX Runtime and OpenVINO on CPU (speeds measured on a CPU with AVX-VNNI, 1 thread).
 
 Benchmarks and contact: [coreepoch.dev/kenosis](https://coreepoch.dev/kenosis/) · contact@coreepoch.dev
 
